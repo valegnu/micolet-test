@@ -1,0 +1,40 @@
+<div class="row">
+  <form id="form">
+    <div class="input-field col s12" id="errors-container">
+      <div class="progress" id="progress"> <div class="indeterminate"></div> </div>
+      <div class="custom-container">
+        <span class="red-text"><%= t(".errors_label") %>:</span>
+        <div id="errors-msg"></div>
+      </div>
+    </div>
+
+    <div class="input-field col s12" id="email-container">
+      <%= email_field "suscription", "email" %>
+      <label id="label-email" for="suscription_email" class="black-text">
+        <%= Suscription.human_attribute_name("email") %> *
+      </label>
+    </div>
+
+    <div class="col s12" id="preferences-container">
+      <p><%= Suscription.human_attribute_name("preferences") %> *</p>
+      <% @options.each do |opt| %>
+        <p>
+          <label>
+            <%= check_box_tag "preferences_" + opt, opt, false, class: "preferences_option" %>
+	    <span id="span-<%=opt%>"><%= t(".preferences."+ opt +"_fashion")%></span>
+          </label>
+        </p>
+      <% end %>
+    </div>
+  
+    <div class="center">
+      <input type="hidden" value="<%= t('.incomplete_message')%>" id="incomplete-message" />
+      <input type="hidden" value="<%= t('.unknown_error')%>" id="unknown-error" />
+      <input type="hidden" value="<%= t('.success_message')%>" id="success-message" />
+      <button class="btn waves-effect waves-light" type="submit" name="action" id="submit-btn">
+        <%= t(".btn_label")%>
+      </button>
+    </div>
+  </form>
+</div>
+

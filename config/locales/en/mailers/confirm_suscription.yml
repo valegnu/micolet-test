@@ -1,0 +1,7 @@
+en:
+  confirm_suscription_mailer:
+    confirm:
+      welcome: Welcome to Micolet!
+      body: Thank you for subscribing to our newsletter, we invite you to see our products
+      call_to_action: Visit store
+      subject: Welcome to Micolet

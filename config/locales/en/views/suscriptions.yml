@@ -1,0 +1,15 @@
+en:
+  suscriptions:
+    new:
+      welcome_message: Welcome! Soon we will launch our site in this country.
+      invitation: Suscribe to receive our newsletter.
+    form:
+      unknown_error: Sorry, an unexpected error has occurred, please try again
+      errors_label: An error has occurred, please validate
+      btn_label: Subscribe me!
+      incomplete_message: Complete all fields please (*)
+      success_message: Thank you for registering, we have sent a message to your tray
+      preferences:
+        women_fashion: Women's Fashion
+        men_fashion: Men's Fashion
+        children_fashion: Children's Fashion

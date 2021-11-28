@@ -1,0 +1,20 @@
+es:
+  activerecord:
+    models:
+      suscription: Suscripción
+    attributes:
+      suscription:
+        email: Correo eléctronico
+        preferences: Preferencias
+    errors:
+      models:
+        suscription:
+          attributes:
+            email:
+              wrong_email: no es válido
+              invalid_format: tiene un formato inválido
+              blank: no puede estar en blanco
+              taken: ya existe en nuestros registros, por favor intente con otro
+            preferences:
+              invalid_format: formato inválido
+              blank: debe seleccionar al menos una opción

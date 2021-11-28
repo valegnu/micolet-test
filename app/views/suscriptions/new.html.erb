@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="center">
+    <h3>micolet</h3>
+    <h5><%= t(".welcome_message") %></h5>
+    <h6><%= t(".invitation") %></h6>
+  </div>
+
+  <div class="container">
+    <%= render 'form' %>
+
+    <%= link_to "Spanish", root_url(locale: :es) %> | 
+    <%= link_to "English", root_url(locale: :en) %>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+es:
+  suscriptions:
+    new:
+      welcome_message: ¡Bienvenido! Pronto lanzaremos nuestro sitio en este país.
+      invitation: Suscríbete para recibir nuestro boletín informativo.
+    form:
+      unknown_error: Lo sentimos, ha ocurrido un error inesperado, intente nuevamente
+      errors_label: Ha ocurrido un error, por favor valide
+      btn_label: ¡Suscribirme!
+      incomplete_message: Por favor complete los datos (*)
+      success_message: Gracias por registrarte, hemos enviado un mensaje a tu bandeja
+      preferences:
+        women_fashion: Moda para mujeres
+        men_fashion: Moda para hombres
+        children_fashion: Moda para niños

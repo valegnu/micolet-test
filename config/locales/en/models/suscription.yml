@@ -1,0 +1,17 @@
+en:
+  activerecord:
+    models:
+      suscription: Suscription
+    attributes:
+      suscription:
+        email: Email
+        preferences: Preferences
+    errors:
+      models:
+        suscription:
+          attributes:
+            email:
+              wrong_email: is not valid
+              invalid_format: has invalid format
+            preferences:
+              invalid_format: is invalid format
