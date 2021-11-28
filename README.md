@@ -15,14 +15,14 @@ This is the resolution of [Micolet challenge](https://gist.github.com/raulr/db4f
   Download project and run:<br/>
   ```
   bundle install
+  rails db:migrate
+  rails webpacker:install
   rails s
   ```
-
+  And go to [localhost:3000](http://localhost:3000)
+  
 * Database creation<br/>
   This project uses SQLite default by rails<br/>
-
-* Database initialization<br/>
-  Run `rails db:migrate`
 
 * How to run the test suite<br/>
   Run (for development purpose):<br/>
@@ -31,7 +31,9 @@ This is the resolution of [Micolet challenge](https://gist.github.com/raulr/db4f
 
 * Services<br/>
   This project has one service for abstract api requests: app/services/email_validator.rb<br/>
-
+  
+* Sending mail<br/>
+  Letter opener gem is used for development environment, when record is created mail is open on browser.
 
 ## Files structure for functionallity
   These files have logic for this app:<br/>
@@ -72,8 +74,11 @@ This is the resolution of [Micolet challenge](https://gist.github.com/raulr/db4f
   &nbsp;&nbsp;&nbsp;&nbsp;config/locales/en/views/suscriptions.yml<br/>
   
 # Screenshots
+
+Spanish:<br/>
 ![spanish1](https://user-images.githubusercontent.com/94926836/143726658-d8ce0ac7-5c10-4f36-8692-69c8de923b83.png)
 ![spanish2](https://user-images.githubusercontent.com/94926836/143726663-d8de697e-4ec6-4a5e-aff4-df97a819ee03.png)
 ![spanish3](https://user-images.githubusercontent.com/94926836/143726666-0fcbd0fe-4b6b-4ded-aaf4-dcfa4813e54d.png)
+English<br/>
 ![english1](https://user-images.githubusercontent.com/94926836/143726669-1e842750-8726-4cbf-a728-6a6cc3114a2e.png)
 ![english2](https://user-images.githubusercontent.com/94926836/143726674-1ad3c277-3c52-4783-aa0e-67b963845a39.png)
