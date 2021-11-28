@@ -22,27 +22,27 @@ function progress() {
     return document.querySelector("#progress")
 }
 // Functions
-function init(){
+function init() {
     document.querySelector("#errors-container").style.display = 'none'
     document.querySelector("#progress").style.display = 'none'
 }
 
-function perform(){
+function perform() {
     if (emailHasValue() && preferencesIsSelected())
 	sendRequest()
     else
 	showIncompleteMessage()
 }
 
-function emailHasValue(){
+function emailHasValue() {
     if (email().value.length > 0)
 	return true
     else
 	return false
 }
 
-function preferencesIsSelected(){
-    for(i = 0; i < checks().length; i++){
+function preferencesIsSelected() {
+    for (i = 0; i < checks().length; i++) {
 	if (checks()[i].checked)
 	    return true
     }
@@ -50,7 +50,7 @@ function preferencesIsSelected(){
     return false
 }
 
-function constructPreferences(){
+function constructPreferences() {
     var preferences = '{'
 
     checks().forEach((element) => {
@@ -62,7 +62,7 @@ function constructPreferences(){
     return JSON.parse(preferences.substring(0, preferences.length - 1) + '}')
 }
 
-function sendRequest(){
+function sendRequest() {
     progress().style.display = 'block'
         
     fetch('/new_suscription', {
@@ -76,28 +76,28 @@ function sendRequest(){
 	    preferences: constructPreferences()
 	}),
     })
-	.then(response => response.json())
-	.then(data => {
+    .then(response => response.json())
+    .then(data => {
 
-	    if (data['message'] == "error")
-		showErrors(data)
-	    else
-		sucess(data)
+	if (data['message'] == "error")
+	    showErrors(data)
+	else
+	    sucess(data)
 	    
-	})
-	.catch((error) => {
-	    progress().style.display = 'none'
-	    showUnknownError()
-	});
+    })
+    .catch((error) => {
+        progress().style.display = 'none'
+	showUnknownError()
+    });
 }
 
-function sucess(data){
+function sucess(data) {
     progress().style.display = 'none'
     cleanForm()
     showSuccessMessage()
 }
 
-function showErrors(data){
+function showErrors(data) {
     progress().style.display = 'none'
     
     var html = "";
@@ -110,26 +110,26 @@ function showErrors(data){
     document.querySelector("#errors-container").style.display = 'block'
 }
 
-function cleanForm(){
+function cleanForm() {
     cleanChecks()
     email().value = ""
     document.querySelector("#errors-container").style.display = 'none'
 }
 
-function cleanChecks(){
+function cleanChecks() {
     checks().forEach((element) => {
 	element.checked = false 
     });
 }
 
-function showUnknownError(){
+function showUnknownError() {
     M.toast( { html: document.querySelector("#unknown-error").value } )
 }
 
-function showIncompleteMessage(){
+function showIncompleteMessage() {
     M.toast( { html: document.querySelector("#incomplete-message").value } )
 }
 
-function showSuccessMessage(){
+function showSuccessMessage() {
     M.toast( { html: document.querySelector("#success-message").value } )
 }
