@@ -35,6 +35,9 @@ This is the resolution of [Micolet challenge](https://gist.github.com/raulr/db4f
 * Sending mail<br/>
   Letter opener gem is used for development environment, when record is created mail is open on browser.
 
+* System validations<br/>
+  Validations for form are present in backend (model level, see app/models/suscription.rb) and frontend for interaction user purposes.
+
 ## Files structure for functionallity
   These files have logic for this app:<br/>
 
